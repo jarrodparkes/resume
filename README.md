@@ -1,3 +1,3 @@
 # Resume
 
-This is my resume. I've chosen to back it with a repository so that it is easier to maintain.
+This repository is a working copy of my resume. It is available at [https://github.com/jarrodparkes/resume.git](https://github.com/jarrodparkes/resume.git).
