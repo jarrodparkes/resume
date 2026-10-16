@@ -25,7 +25,7 @@ body {
   background: var(--paper);
   font-family: var(--body);
   font-size: 18px;
-  line-height: 1.55;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -47,8 +47,10 @@ a:hover {
 }
 
 .wrap {
-  width: min(72rem, calc(100% - 3rem));
+  box-sizing: content-box;
+  max-width: 72rem;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .dateline,
@@ -59,7 +61,7 @@ a:hover {
 .date,
 .site-footer {
   font-family: var(--mono);
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -116,6 +118,7 @@ a:hover {
 }
 
 .masthead-nav a:hover {
+  color: var(--red);
   border-bottom-color: var(--red);
 }
 
@@ -189,7 +192,8 @@ main {
   font-family: var(--display);
   font-size: 2.25rem;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
 }
 
 .section-number {
@@ -303,6 +307,7 @@ main {
 }
 
 .site-footer {
+  margin-top: 2rem;
   color: var(--meta);
   border-top: 3px double var(--ink);
 }
@@ -312,15 +317,17 @@ main {
   padding-bottom: 1.5rem;
 }
 
-@media (max-width: 48rem) {
-  .wrap {
-    width: min(100% - 2rem, 72rem);
+@media screen and (max-width: 40rem) {
+  .dateline-tagline {
+    display: none;
   }
 
   .masthead-title {
     font-size: 1.85rem;
   }
+}
 
+@media (max-width: 48rem) {
   .hero {
     padding-top: 2.75rem;
   }
@@ -377,7 +384,8 @@ main {
   }
 
   .wrap {
-    width: 100%;
+    max-width: none;
+    padding: 0;
   }
 
   .dateline,
